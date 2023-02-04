@@ -21,7 +21,7 @@ public interface MessageGateway {
      *  being thrown, instead onSuccess is being called with null payload after replyTimeout.
      *
      *  What I also noticed - even if replyTimeout > receiveTimeout the behaviour is not consistent/repeatable.
-     *  Sometimes instead of having onFailure called onSuccess is being called with null payload
+     *  Sometimes instead of having onFailure called onSuccess is being called instead with null payload
      *  followed by a WARN log entry from MessagingTemplate$TemporaryReplyChannel: "Reply message received but
      *  the receiving thread has exited due to a timeout: ErrorMessage [payload=org.springframework.messaging.MessageHandlingException:
      *  nested exception is org.springframework.integration.jms.JmsTimeoutException: No reply in 'receiveTimeout' ms (after replyTimeout ms)
